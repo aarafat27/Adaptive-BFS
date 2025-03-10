@@ -58,8 +58,8 @@ L_{i+1} = \{ v \in V \mid \exists u \in L_i, (u, v) \in E, \text{Priority}(v) > 
 where **Priority(v)** is a dynamic scoring function based on **node degree, betweenness centrality, or domain-specific weights**.
 
 ### A-BFS Pseudocode  
-Algorithm A-BFS(Graph G, Start Node s): Input: Graph G = (V, E), Start node s Output: Ordered list of visited nodes
 ```
+Algorithm A-BFS(Graph G, Start Node s): Input: Graph G = (V, E), Start node s Output: Ordered list of visited nodes
 1:  Create a max-priority queue PQ
 2:  Initialize a visited set: Visited ← {s}
 3:  Insert (Priority(s), s) into PQ
