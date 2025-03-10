@@ -1,4 +1,7 @@
 # Adaptive-BFS (A-BFS)
+![2148999167](https://github.com/user-attachments/assets/235e0803-edfb-410f-a271-099187904333)
+
+
 A New Graph Traversal Algorithm. A novel traversal approach that combines BFS and DFS adaptively for better efficiency in certain types of graphs.
 
 ### Problem with Existing Traversals
