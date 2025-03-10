@@ -30,7 +30,7 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 - More Memory Efficient than BFS – Reduces unnecessary memory usage in wide graphs.
 - Faster Exploration in Certain Graphs – Handles irregular graphs better by intelligently switching modes.
 
-### Mathematical Concept of A-BFS
+### 🧮 Mathematical Concept of A-BFS
 
 Let **G = (V, E)** be a graph with:
 
@@ -51,7 +51,7 @@ where **Priority(v)** is a dynamic scoring function based on **node degree, betw
 
 
 
-### A-BFS Pseudocode  
+### 🔏 A-BFS Pseudocode  
 ```
 Algorithm A-BFS(Graph G, Start Node s): Input: Graph G = (V, E), Start node s Output: Ordered list of visited nodes
 1:  Create a max-priority queue PQ
