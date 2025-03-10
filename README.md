@@ -17,19 +17,27 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 4. **Better Performance on Large Graphs**  
     - A-BFS can be faster than BFS in graphs where certain nodes act as central hubs or where traversal costs need optimization.
 
+---
+
 ### 🔎 Problem with Existing Traversals
 - BFS (Breadth-First Search) explores level by level but consumes too much memory in wide graphs.
 - DFS (Depth-First Search) is memory efficient but gets stuck in deep branches in some cases.
-  
+
+---
+
 ### 📌 Concept of Adaptive-BFS (A-BFS)
 - **Hybrid Approach:** Start with BFS, but dynamically switch to DFS when encountering a dense local structure (i.e., many neighbors).
 - **Adaptive Depth Control:** A-BFS estimates whether to switch modes based on node degree and local density.
 - **Efficient Memory Use:** Uses a limited queue like BFS but prunes unnecessary branches dynamically like DFS.
 
+---
+
 ### 🧿 Why is A-BFS Unique?
 - Dynamically Adjusts Traversal Strategy – Instead of blindly following BFS or DFS, it adapts based on local density.
 - More Memory Efficient than BFS – Reduces unnecessary memory usage in wide graphs.
 - Faster Exploration in Certain Graphs – Handles irregular graphs better by intelligently switching modes.
+
+---
 
 ### 🧮 Mathematical Concept of A-BFS
 
@@ -50,7 +58,7 @@ In A-BFS, the expansion function is modified:
 
 where **Priority(v)** is a dynamic scoring function based on **node degree, betweenness centrality, or domain-specific weights**.
 
-
+---
 
 ### 🔏 A-BFS Pseudocode  
 ```
