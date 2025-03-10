@@ -34,46 +34,44 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 
 ## Mathematical Concept
 ```
-Let **\( G = (V, E) \)** be an undirected or directed graph where:  
-- \( V \) is the set of nodes (vertices)  
-- \( E \) is the set of edges  
+## Mathematical Concept of A-BFS
 
-In a standard **Breadth-First Search (BFS)**, nodes are explored level by level using the expansion rule:  
-\[
-L_{i+1} = \{ v \in V \ | \ \exists u \in L_i, (u, v) \in E \}
-\]
-where **\( L_i \)** is the set of nodes visited at depth \( i \).
+Let **G = (V, E)** be a graph with:
 
-In **Adaptive BFS (A-BFS)**, the traversal is modified by introducing a **priority function** that determines the expansion order dynamically:
+- **V** as the set of nodes  
+- **E** as the set of edges  
+
+A traditional BFS explores nodes level by level:
 
 \[
-L_{i+1} = \{ v \in V \ | \ \exists u \in L_i, (u, v) \in E, \text{Priority}(v) > \text{Threshold} \}
+L_{i+1} = \{ v \in V \mid \exists u \in L_i, (u, v) \in E \}
 \]
 
-where:
-- **\( \text{Priority}(v) \)** is a scoring function based on **node centrality, connectivity, or custom weight functions**.
-- **\( \text{Threshold} \)** is an adaptive parameter that regulates expansion decisions dynamically.
+where **L_i** is the set of nodes visited at depth **i**.
 
-A common priority function can be the **degree-based priority**:
+In A-BFS, the expansion function is modified:
+
 \[
-\text{Priority}(v) = \deg(v)
+L_{i+1} = \{ v \in V \mid \exists u \in L_i, (u, v) \in E, \text{Priority}(v) > \text{Threshold} \}
 \]
-where \( \deg(v) \) is the number of connections (edges) of node \( v \).
+
+where **Priority(v)** is a dynamic scoring function based on **node degree, betweenness centrality, or domain-specific weights**.
+
 ```
 ## A-BFS Pseudocode  
 Algorithm A-BFS(Graph G, Start Node s): Input: Graph G = (V, E), Start node s Output: Ordered list of visited nodes
 ```
-1. Create a max-priority queue PQ
-2. Initialize a visited set: Visited ← {s}
-3. Insert (Priority(s), s) into PQ
-4. While PQ is not empty:
-    5.   Extract node u with the highest priority from PQ
-    6.   For each neighbor v of u:
-    7.       If v is not in Visited:
-    8.           Add v to Visited
-    9.           Compute Priority(v) = f(v) (e.g., degree-based)
-    10.          Insert (Priority(v), v) into PQ
-11. Return Visited
+1:  Create a max-priority queue PQ
+2:  Initialize a visited set: Visited ← {s}
+3:  Insert (Priority(s), s) into PQ
+4:  While PQ is not empty:
+5:        Extract node u with the highest priority from PQ
+6:        For each neighbor v of u:
+7:            If v is not in Visited:
+8:                Add v to Visited
+9:                Compute Priority(v) = f(v) (e.g., degree-based)
+10:               Insert (Priority(v), v) into PQ
+11:  Return Visited
 ```
 
 
