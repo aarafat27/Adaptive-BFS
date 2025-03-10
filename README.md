@@ -33,7 +33,7 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 # Adaptive Breadth-First Search (A-BFS)
 
 ## Mathematical Concept
-```
+
 ## Mathematical Concept of A-BFS
 
 Let **G = (V, E)** be a graph with:
@@ -57,8 +57,7 @@ L_{i+1} = \{ v \in V \mid \exists u \in L_i, (u, v) \in E, \text{Priority}(v) > 
 
 where **Priority(v)** is a dynamic scoring function based on **node degree, betweenness centrality, or domain-specific weights**.
 
-```
-## A-BFS Pseudocode  
+### A-BFS Pseudocode  
 Algorithm A-BFS(Graph G, Start Node s): Input: Graph G = (V, E), Start node s Output: Ordered list of visited nodes
 ```
 1:  Create a max-priority queue PQ
