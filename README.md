@@ -6,7 +6,7 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 
 > Adaptive-BFS (A-BFS) is an enhanced version of Breadth-First Search (BFS) that dynamically adjusts its traversal strategy based on the structure of the graph. Unlike standard BFS, which explores all neighbors level by level in a strict queue-based manner, A-BFS adapts based on factors such as degree centrality, clustering, or priority metrics.
 
---
+---
 ### 🧬 Key Characteristics of A-BFS
 1. **Priority-Based Expansion**  
     - Instead of processing nodes purely in FIFO (First-In, First-Out) order, A-BFS prioritizes high-degree or important nodes first.
