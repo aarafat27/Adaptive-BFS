@@ -30,10 +30,25 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 - More Memory Efficient than BFS – Reduces unnecessary memory usage in wide graphs.
 - Faster Exploration in Certain Graphs – Handles irregular graphs better by intelligently switching modes.
 
-# Adaptive Breadth-First Search (A-BFS)
+### Mathematical Concept of A-BFS
 
-## Mathematical Concept
-L_(i+1) = { v ∈ V | ∃ u ∈ L_i, (u, v) ∈ E, Priority(v) > Threshold }
+Let **G = (V, E)** be a graph with:
+
+- **V** as the set of nodes  
+- **E** as the set of edges  
+
+A traditional BFS explores nodes level by level:
+
+    L(i+1) = { v ∈ V | ∃ u ∈ L_i, (u, v) ∈ E }
+
+where **L_i** is the set of nodes visited at depth **i**.
+
+In A-BFS, the expansion function is modified:
+
+    L(i+1) = { v ∈ V | ∃ u ∈ L_i, (u, v) ∈ E, Priority(v) > Threshold }
+
+where **Priority(v)** is a dynamic scoring function based on **node degree, betweenness centrality, or domain-specific weights**.
+
 
 
 ### A-BFS Pseudocode  
