@@ -8,13 +8,13 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 
 ### 🧬 Key Characteristics of A-BFS
 1. **Priority-Based Expansion**  
-  - Instead of processing nodes purely in FIFO (First-In, First-Out) order, A-BFS prioritizes high-degree or important nodes first.
+    - Instead of processing nodes purely in FIFO (First-In, First-Out) order, A-BFS prioritizes high-degree or important nodes first.
 2. **Dynamic Expansion Strategy**  
-  - A-BFS switches between BFS and more selective expansions based on graph properties like node connectivity or depth.
+    - A-BFS switches between BFS and more selective expansions based on graph properties like node connectivity or depth.
 3. **Reduced Redundant Exploration**  
-  - By intelligently prioritizing certain nodes, A-BFS reduces unnecessary expansions, making it more efficient than traditional BFS.
+    - By intelligently prioritizing certain nodes, A-BFS reduces unnecessary expansions, making it more efficient than traditional BFS.
 4. **Better Performance on Large Graphs**  
-  - A-BFS can be faster than BFS in graphs where certain nodes act as central hubs or where traversal costs need optimization.
+    - A-BFS can be faster than BFS in graphs where certain nodes act as central hubs or where traversal costs need optimization.
 
 ### 🔎 Problem with Existing Traversals
 - BFS (Breadth-First Search) explores level by level but consumes too much memory in wide graphs.
@@ -33,7 +33,7 @@ A New Graph Traversal Algorithm. A novel traversal approach that combines BFS an
 # Adaptive Breadth-First Search (A-BFS)
 
 ## Mathematical Concept
-
+```
 Let **\( G = (V, E) \)** be an undirected or directed graph where:  
 - \( V \) is the set of nodes (vertices)  
 - \( E \) is the set of edges  
@@ -59,7 +59,21 @@ A common priority function can be the **degree-based priority**:
 \text{Priority}(v) = \deg(v)
 \]
 where \( \deg(v) \) is the number of connections (edges) of node \( v \).
-
-## A-BFS Pseudocode
+```
+## A-BFS Pseudocode  
+Algorithm A-BFS(Graph G, Start Node s): Input: Graph G = (V, E), Start node s Output: Ordered list of visited nodes
+```
+1. Create a max-priority queue PQ
+2. Initialize a visited set: Visited ← {s}
+3. Insert (Priority(s), s) into PQ
+4. While PQ is not empty:
+    5.   Extract node u with the highest priority from PQ
+    6.   For each neighbor v of u:
+    7.       If v is not in Visited:
+    8.           Add v to Visited
+    9.           Compute Priority(v) = f(v) (e.g., degree-based)
+    10.          Insert (Priority(v), v) into PQ
+11. Return Visited
+```
 
 
