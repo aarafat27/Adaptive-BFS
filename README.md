@@ -1,7 +1,5 @@
 # Adaptive-BFS (A-BFS)
-### A New Graph Traversal Algorithm
-
-A novel traversal approach that combines BFS and DFS adaptively for better efficiency in certain types of graphs.
+A New Graph Traversal Algorithm. A novel traversal approach that combines BFS and DFS adaptively for better efficiency in certain types of graphs.
 
 ### Problem with Existing Traversals
 - BFS (Breadth-First Search) explores level by level but consumes too much memory in wide graphs.
